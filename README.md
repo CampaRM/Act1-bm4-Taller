@@ -1,59 +1,76 @@
-# PrimerProyectoAngular
+# Proyecto Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.4.
+Proyecto generado para ver la funcionalidad de Angular CLI, versión 22.1.4
 
-## Development server
+## Desarollo:
 
-To start a local development server, run:
+Para iniciar el servidor, ejecutar:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Una vez el servidor esta ejecutándose, abrir el navegador y entrar al siguiente enlace:  `http://localhost:4200/`. Donde se mostrara toda la información de la aplicación.
 
-## Code scaffolding
+## Cómo se creo:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Se genero con Angular CLI:
 
 ```bash
-ng generate --help
+ng new mi_primer_proyecto_angular --style=scss
 ```
 
-## Building
-
-To build the project run:
+Una vez creado el proyecto se generaron sus diferentes componentes.
 
 ```bash
-ng build
+ng g c components/form --standalone=false
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Estructura
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+La estructura del proyecto es la siguiente:
 
 ```bash
-ng test
+primer_proyecto_angular/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── datos/
+│   │   │   │   ├── datos.component.html
+│   │   │   │   ├── datos.component.scss
+│   │   │   │   ├── datos.component.spec.ts
+│   │   │   │   └── datos.component.ts
+│   │   │   ├── form/
+│   │   │   └── profile/
+│   │   │       ├── profile.component.html
+│   │   │       ├── profile.component.scss
+│   │   │       ├── profile.component.spec.ts
+│   │   │       └── profile.component.ts
+│   │   ├── app-routing.module.ts
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.ts
+│   │   └── app.module.ts
+│   ├── index.html
+│   ├── main.ts
 ```
 
-## Running end-to-end tests
+Donde el proyecto cuenta con 3 diferentes componentes `datos/, form/, profile/`
 
-For end-to-end (e2e) testing, run:
+## Ejecuión del proyecto:
+
+para ejecutar el proyecto usamos el comando:
 
 ```bash
-ng e2e
+ng serve
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Componentes:
 
-## Additional Resources
+Los diferentes componentes con los que cuenta el proyecto son:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1\. Profile: perfil con mis datos como usuario
+<hr>
+2. Datos: Información de diferentes usuarios al azar.
+<hr>
+3. Form: Formulario de entrada de datos.
