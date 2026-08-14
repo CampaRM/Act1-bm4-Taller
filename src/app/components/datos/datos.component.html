@@ -1,0 +1,21 @@
+<div class="card">
+  <h2>Datos Aleatorios</h2>
+  
+  <hr>
+
+  <div class="data-container" *ngIf="currentUser as user">
+    <p><strong>ID:</strong> {{ user.id }}</p>
+    <p><strong>Nombre:</strong> {{ user.name }}</p>
+    <p><strong>Correo:</strong> {{ user.email }}</p>
+    <p><strong>Rol:</strong> {{ user.role }}</p>
+    <p><strong>Saldo:</strong> ${{ user.balance }}</p>
+    <p>
+      <strong>Estado:</strong> 
+      <span [class.active]="user.isActive" [class.inactive]="!user.isActive">
+        {{ user.isActive ? 'Activo' : 'Inactivo' }}
+      </span>
+    </p>
+  </div>
+
+  <button (click)="refreshData()">Generar nuevo dato</button>
+</div>

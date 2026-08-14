@@ -1,0 +1,24 @@
+<div class="form-card" style="text-align: center;">
+  <h2>Formulario de Contacto</h2>
+  
+  <form (ngSubmit)="enviarFormulario()">
+    <div class="form-group">
+      <label>Asunto:</label>
+      <input type="text" [(ngModel)]="formData.asunto" name="asunto" required>
+    </div>
+
+    <div class="form-group">
+      <label>Mensaje:</label>
+      <textarea [(ngModel)]="formData.mensaje" name="mensaje" rows="4" required></textarea>
+    </div>
+
+    <div class="form-checkbox" style="text-align: center;">
+      <label style="text-align: center;">
+        <input type="checkbox" [(ngModel)]="formData.suscripcion" name="suscripcion" style="text-align: center;">
+        Suscribirse al boletín informativo
+      </label>
+    </div>
+
+    <button type="submit" class="btn-submit">Enviar</button>
+  </form>
+</div>

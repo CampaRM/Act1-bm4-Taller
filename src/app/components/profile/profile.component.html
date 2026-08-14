@@ -1,0 +1,37 @@
+<div class="profile-card">
+  <div class="profile-header">
+    <div class="avatar-placeholder">
+      {{ userProfile.nombre.charAt(0) }}
+    </div>
+    <div class="profile-title">
+      <h2>{{ userProfile.nombre }}</h2>
+      <p class="role">{{ userProfile.rol }}</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="profile-body">
+    <div class="info-group">
+      <strong>Correo electrónico:</strong>
+      <span>{{ userProfile.email }}</span>
+    </div>
+    <div class="info-group">
+      <strong>Ubicación:</strong>
+      <span>{{ userProfile.ubicacion }}</span>
+    </div>
+    <div class="info-group">
+      <strong>Biografía:</strong>
+      <p>{{ userProfile.biografia }}</p>
+    </div>
+
+    <div class="skills-section">
+      <strong>Se:</strong>
+      <div class="skills-list">
+        <span class="skill-badge" *ngFor="let skill of userProfile.habilidades">
+          {{ skill }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
